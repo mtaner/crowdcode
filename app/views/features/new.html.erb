@@ -1,0 +1,8 @@
+<%= form_for [@project, @feature] do |f| %>
+
+Feature Name:<%= f.text_field :name %>
+Description:<%= f.text_field :description %>
+Deadline:<%= f.date_field :deadline, placeholder: 'dd/mm/yy' %>
+<%= f.submit %>
+
+<% end %>

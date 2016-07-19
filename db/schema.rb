@@ -14,13 +14,17 @@
 ActiveRecord::Schema.define(version: 20160719122639) do
 
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "features", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.integer  "project_id"
+    t.string   "name"
+    t.text     "description"
+    t.date     "deadline"
     t.index ["project_id"], name: "index_features_on_project_id", using: :btree
   end
 
