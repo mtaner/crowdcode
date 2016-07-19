@@ -15,7 +15,6 @@ feature 'Projects' do
       visit '/projects/new'
       #click_link 'New project'
       fill_in 'Name', with: 'Songodoro'
-      fill_in 'Language', with: 'Ruby'
       fill_in 'Description', with: 'Music break'
       fill_in 'Launch date', with: '01/12/2016'
       click_button 'Create Project'
