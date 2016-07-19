@@ -18,8 +18,8 @@ feature 'Projects' do
       fill_in 'Language', with: 'Ruby'
       fill_in 'Description', with: 'Music break'
       fill_in 'Launch date', with: '01/12/2016'
-      click_button 'Add Project'
-      expect(current_path).to eq "/projects/#{songodoro.id}"
+      click_button 'Create Project'
+      expect(page).to have_content 'Songodoro'
     end
   end
 end
