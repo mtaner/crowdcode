@@ -15,17 +15,17 @@ feature 'adding features to project' do
 		end
 
 		scenario 'adds features link takes user to correct path' do
-			visit("/projects/#{project.id}")
+			visit(project_path(project))
 			click_link('Add Feature')
 			expect(current_path).to eq(new_project_feature_path(project))
-		end 
+		end
 
 	end
 
 	context '1 project has been added with features' do
 		
 		before :each do
-			visit("/projects/#{project.id}")
+			visit(project_path(project))
 			click_on('Add Feature')
 		end
 
