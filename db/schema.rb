@@ -10,15 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160719094635) do
+ActiveRecord::Schema.define(version: 20160719113225) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "features", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.integer  "project_id"
+    t.string   "name"
+    t.text     "description"
+    t.date     "deadline"
     t.index ["project_id"], name: "index_features_on_project_id", using: :btree
   end
 

@@ -3,3 +3,11 @@ Project Description
 No features yet
 
 <%= link_to 'Add Feature', new_project_feature_path(@project) %>
+
+<% @project.features.each do |feature| %>
+
+	<p><%= feature.name %></p>
+	<p><%= feature.description %></p>
+	<p><%= feature.deadline.strftime("%y/%m/%d") %></p>
+
+<% end %>
