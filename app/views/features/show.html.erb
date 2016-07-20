@@ -8,8 +8,5 @@
 
 <% @feature.requests.each do |request| %>
 	<%= request.user.email %>
-	<%= link_to 'Select', feature_path(@feature), method: :post %>
+	<%= link_to 'Select', request_path(request), method: :patch %>
 <% end %>
-
-
-
