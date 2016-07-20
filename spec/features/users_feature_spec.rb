@@ -23,16 +23,40 @@ feature "User can sign in and out" do
       fill_in('Password confirmation', with: 'testtest')
       click_button('Sign up')
     end
-  
+
     it "should see 'sign out' link" do
       visit('/')
       expect(page).to have_link('Sign out')
     end
-  
+
     it "should not see a 'sign in' link and a 'sign up' link" do
       visit('/')
       expect(page).not_to have_link('Sign in')
       expect(page).not_to have_link('Sign up')
     end
+  end
+
+  feature 'Users can see and edit their profiles' do
+    context 'View own profile' do
+      it 'should go to own profile' do
+        signup
+        click_link 'My profile'
+        expect(page).to have_content 'test@example.com'
+      end
+    end
+
+    context 'Editing profiles' do
+      it 'should be able to edit own profile' do
+        signup
+        click_link 'My profile'
+        click_link 'Edit profile'
+        fill_in 'Name', with: 'Bob'
+        fill_in 'Description', with: 'Ruby developer'
+        click_button 'Update User'
+        expect(page).to have_content 'Bob'
+        expect(page).to have_content 'Ruby developer'
+      end
+    end
+
   end
 end
