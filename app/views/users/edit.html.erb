@@ -1,13 +1,5 @@
 <%  if current_user.id == @user.id %>
-
-  <%= form_for @user do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-    <%= f.submit %>
-  <% end %>
-
+<%= render "form" %>
 <% else %>
 
 Sorry, you cannot edit another user's profile
