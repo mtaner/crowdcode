@@ -11,6 +11,10 @@ class FeaturesController < ApplicationController
 		redirect_to project_path(@project)
 	end
 
+  def show
+    @feature = Feature.find(params[:id])
+  end
+
 	private
 
 	def feature_params

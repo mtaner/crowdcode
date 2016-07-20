@@ -27,7 +27,7 @@ feature 'adding features to project' do
 	end
 
 	context '1 project has been added with features' do
-		
+
 		before :each do
 			visit(project_path(project))
 			click_on('Add Feature')
@@ -44,6 +44,45 @@ feature 'adding features to project' do
 			expect(current_path).to eq(project_path(project))
 		end
 
+   #  let!(:feature) do
+  	# 	Feature.create(name: 'Test Feature', description: 'Test Feature',
+   #                  deadline: '08/09/16', project_id: project.id)
+  	# end
+
+    # scenario 'user clicks feature name and visits feature page' do
+    #   visit "/projects/#{project.id}"
+    #   click_on 'Test Feature'
+    #   expect(page).to have_content 'Test Feature'
+    #   expect(current_path).to eq "/features/#{Feature.last.id}"
+    #   expect(page).to have_content 'Assigned Developer: Not Assigned'
+    # end
+
+
 	end
+
+  # context 'developer has been assigned to feature' do
+
+  #   before :each do
+		# 	visit(project_path(project))
+		# 	click_on('Add Feature')
+		# end
+
+  #   let!(:feature) do
+  # 		Feature.create(name: 'Test Feature', description: 'Test Feature',
+  #                   deadline: '08/09/16', project_id: project.id)
+  # 	end
+
+  #   let(:request) do
+  # 		Request.create(feature_id: feature.id, assigned: true, user_id: user.id)
+  #   end
+
+
+  #   scenario 'user can see the assigned developer' do
+  #     visit "/projects/#{project.id}"
+  #     click_on 'Test Feature'
+  #     expect(page).to have_content 'Assigned Developer: Bob@email.com'
+  #   end
+
+  # end
 
 end
