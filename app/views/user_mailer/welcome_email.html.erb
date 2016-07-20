@@ -4,12 +4,10 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
   </head>
   <body>
-    <h1>Welcome to CrowdCode.com, <%= @user.name %></h1>
-    <p>
-      You have successfully signed up to CrowdCode.
-    </p>
-    <p>
-      Thanks for joining and have a great day!
-    </p>
+    <h1>Congratulations from CrowdCode.com, <%= @user.name %></h1>
+    <p>You have been selected to contribute to the '<%= @feature.project.name %>' project!</p>
+      <p>You will be developing the '<%= @feature.name %>' feature.</p>
+      <p>Please sign in to CrowdCode.com to view the details.</p>
+    <p>Thanks for contributing and have a great day!</p>
   </body>
 </html>
