@@ -26,13 +26,6 @@ feature 'adding features to project' do
       expect(page).to have_content('No features yet')
       expect(page).to have_link('Add Feature')
     end
-
-    scenario 'adds features link takes user to correct path' do
-      visit(project_path(project))
-      click_link('Add Feature')
-      expect(current_path).to eq(new_project_feature_path(project))
-    end
-
   end
 
   context '1 project has been added with features' do
@@ -51,6 +44,12 @@ feature 'adding features to project' do
       expect(page).to have_content('Description 1')
       expect(page).to have_content('31/08/16')
       expect(current_path).to eq(project_path(project))
+    end
+
+    scenario 'adds features link takes user to correct path' do
+      visit(project_path(project))
+      click_link('Add Feature')
+      expect(current_path).to eq(new_project_feature_path(project))
     end
 
     let!(:request) do

@@ -6,4 +6,11 @@ class RequestsController < ApplicationController
 		render json: {new_status: 'Your request has been sent'}
 	end
 
+	def update
+		@request = Request.find(params[:id])
+		@feature = @request.feature
+		@request.update(assigned: true)
+		redirect_to feature_path(@feature)
+	end
+
 end

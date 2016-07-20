@@ -2,20 +2,12 @@
 <h2><%= @feature.name %></h2>
 <h3>Description:<h3>
 <p><%= @feature.description %></p>
+
 <h3>Assigned Developer: <%= @dev %></h3>
-<%=  %>
-<%=  %>
-<%=  %>
-<%=  %>
-<%=  %>
-<%=  %>
-<%=  %>
-<%=  %>
-<%=  %>
-<%=  %>
-<%=  %>
-<%=  %>
-<%=  %>
-<%=  %>
-<%=  %>
-<%=  %>
+
+<h3>Requests Received for Feature:</h3>
+
+<% @feature.requests.each do |request| %>
+	<%= request.user.email %>
+	<%= link_to 'Select', request_path(request), method: :patch %>
+<% end %>
