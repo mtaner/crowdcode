@@ -1,2 +1,9 @@
 class RequestsController < ApplicationController
+
+	def create
+		@feature = Feature.find(params[:feature_id])
+		@request = @feature.requests.create_with_user({assigned: false}, current_user)
+		render json: {new_status: 'Your request has been sent'}
+	end
+
 end

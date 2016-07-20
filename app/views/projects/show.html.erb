@@ -16,13 +16,14 @@ No features yet
 					<% if request.assigned %>
 						<p>Show interest</p>
 					<% else %>
-						<% return %>
+					<div>
 						<p>Not assigned</p>
-						<p><%= link_to 'Send Request', feature_requests_path(feature), method: :post %></p>
+						<span class=request-status>Inside loop</span><%= link_to 'Send Request', feature_requests_path(feature), class: 'request-link'%></div>
 					<% end %>
 				<% end %>
 		<% else %>
+				<div>
 				<p>Not assigned</p>
-				<p><%= link_to 'Send Request', feature_requests_path(feature), method: :post %></p>
+				<span class=request-status>Outside loop</span><%= link_to 'Send Request', feature_requests_path(feature), class: 'request-link'%></div>
 		<% end %>
 <% end %>
