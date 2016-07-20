@@ -1,4 +1,7 @@
 class Project < ApplicationRecord
-	# belongs_to :user
-	has_many :features
+
+	extend WithUserAssociationExtension
+
+	belongs_to :user
+	has_many :features, dependent: :destroy
 end

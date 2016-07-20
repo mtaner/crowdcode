@@ -2,9 +2,13 @@ require 'rails_helper'
 
 feature 'adding features to project' do
 
-	let!(:project) do
-		Project.create
-	end
+	let!(:user) do
+    User.create(email: 'owner@test.com', password: 'testtest', password_confirmation: 'testtest')
+  end
+
+  let!(:project) do
+    Project.create(name: 'Test Project', user_id: user.id)
+  end
 
 	context '1 project has been added with no features added' do
 
