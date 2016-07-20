@@ -7,7 +7,7 @@ No features yet
 
 <% @project.features.each do |feature| %>
 
-	<p><%= feature.name %></p>
+	<p><%= link_to feature.name, feature_path(feature) %></p>
 	<p><%= feature.description %></p>
 	<p><%= feature.deadline.strftime("%y/%m/%d") %></p>
 
