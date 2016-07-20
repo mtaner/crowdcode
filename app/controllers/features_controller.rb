@@ -13,6 +13,7 @@ class FeaturesController < ApplicationController
 
   def show
     @feature = Feature.find(params[:id])
+   	@dev = @feature.get_assigned_dev
   end
 
 	private
