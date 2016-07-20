@@ -3,19 +3,13 @@
 <h3>Description:<h3>
 <p><%= @feature.description %></p>
 <h3>Assigned Developer: </h3>
-<%=  %>
-<%=  %>
-<%=  %>
-<%=  %>
-<%=  %>
-<%=  %>
-<%=  %>
-<%=  %>
-<%=  %>
-<%=  %>
-<%=  %>
-<%=  %>
-<%=  %>
-<%=  %>
-<%=  %>
-<%=  %>
+
+<h3>Requests Received for Feature:</h3>
+
+<% @feature.requests.each do |request| %>
+	<%= request.user.email %>
+	<%= link_to 'Select', feature_path(@feature), method: :post %>
+<% end %>
+
+
+

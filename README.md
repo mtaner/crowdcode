@@ -128,3 +128,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+Set up:
+
+`brew install phantomjs`

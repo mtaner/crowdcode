@@ -18,10 +18,6 @@ feature 'sending in request to work on a feature' do
 		Feature.create(name: 'Feature name', description: 'Feature description', deadline: '08/09/16', project: project)
 	end
 
-	# let(:request) do
-	# 	Request.create(feature_id: feature.id, assigned: false)
-	# end
-	#
 	context 'one project has been added with one feature' do
 		scenario 'feature is initially not assigned' do
 			visit project_path(project)
