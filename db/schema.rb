@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20160719225151) do
     t.datetime "updated_at", null: false
     t.integer  "feature_id"
     t.integer  "user_id"
+    t.boolean  "assigned"
     t.index ["feature_id"], name: "index_requests_on_feature_id", using: :btree
     t.index ["user_id"], name: "index_requests_on_user_id", using: :btree
   end

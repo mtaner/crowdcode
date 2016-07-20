@@ -11,4 +11,18 @@ No features yet
 	<p><%= feature.description %></p>
 	<p><%= feature.deadline.strftime("%y/%m/%d") %></p>
 
+		<% if feature.requests.any? %>
+				<% feature.requests.each do |request| %>
+					<% if request.assigned %>
+						<p>Show interest</p>
+					<% else %>
+						<% return %>
+						<p>Not assigned</p>
+						<p><%= link_to 'Send Request', feature_requests_path(feature), method: :post %></p>
+					<% end %>
+				<% end %>
+		<% else %>
+				<p>Not assigned</p>
+				<p><%= link_to 'Send Request', feature_requests_path(feature), method: :post %></p>
+		<% end %>
 <% end %>
