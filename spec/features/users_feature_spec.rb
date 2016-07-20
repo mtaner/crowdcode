@@ -35,8 +35,13 @@ feature "User can sign in and out" do
       expect(page).not_to have_link('Sign up')
     end
   end
+end
 
   feature 'Users can see and edit their profiles' do
+    let!(:user) do
+      User.create(email: 'owner@test.com', password: 'testtest', password_confirmation: 'testtest')
+    end
+
     context 'View own profile' do
       it 'should go to own profile' do
         signup
@@ -45,7 +50,10 @@ feature "User can sign in and out" do
       end
     end
 
+
     context 'Editing profiles' do
+
+
       it 'should be able to edit own profile' do
         signup
         click_link 'My profile'
@@ -56,7 +64,12 @@ feature "User can sign in and out" do
         expect(page).to have_content 'Bob'
         expect(page).to have_content 'Ruby developer'
       end
-    end
 
+      it 'should not be able to edit other profiles' do
+        signup
+        click_link 'My profile'
+        visit user_path(user)
+        expect(page).to_not have_content 'Edit profile'
+      end
   end
 end

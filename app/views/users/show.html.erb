@@ -1,4 +1,6 @@
+<% if current_user.id == @user.id %>
 <%= link_to "Edit profile", edit_user_path %>
+<% end %>
 
 
 <br>
