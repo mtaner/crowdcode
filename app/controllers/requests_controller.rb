@@ -10,6 +10,9 @@ class RequestsController < ApplicationController
 		@request = Request.find(params[:id])
 		@feature = @request.feature
 		@request.update(assigned: true)
+    p "send an email to #{@request.user}"
+    UserMailer.welcome_email(@request.user).deliver_now
+
 		redirect_to feature_path(@feature)
 	end
 
