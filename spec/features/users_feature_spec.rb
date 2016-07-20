@@ -57,15 +57,6 @@ feature "User can sign in and out" do
         expect(page).to have_content 'Ruby developer'
       end
     end
-    # it 'should not be able to edit another profile' do
-    #   signup
-    #   click_link 'My profile'
-    #   p current_url
-    #   click_link 'Sign out'
-    #   signup2
-    #   click_link 'My profile'
-    #   p current_url
-    #   expect(page).to have_content 'test@example.com'
-    # end
+
   end
 end

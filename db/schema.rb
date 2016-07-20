@@ -28,10 +28,10 @@ ActiveRecord::Schema.define(version: 20160720103254) do
   create_table "projects", force: :cascade do |t|
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "user_id"
     t.string   "name"
     t.text     "description"
     t.datetime "launch_date"
-    t.integer  "user_id"
     t.index ["user_id"], name: "index_projects_on_user_id", using: :btree
   end
 
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20160720103254) do
     t.datetime "updated_at", null: false
     t.integer  "feature_id"
     t.integer  "user_id"
+    t.boolean  "assigned"
     t.index ["feature_id"], name: "index_requests_on_feature_id", using: :btree
     t.index ["user_id"], name: "index_requests_on_user_id", using: :btree
   end
@@ -57,6 +58,8 @@ ActiveRecord::Schema.define(version: 20160720103254) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "provider"
+    t.string   "uid"
     t.string   "name"
     t.text     "description"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
