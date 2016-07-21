@@ -22,7 +22,7 @@ feature 'adding features to project' do
   context '1 project has been added with no features added' do
 
     scenario 'project has no features' do
-      visit(project_path(project))
+      visit project_path(project)
       expect(page).to have_content('No features yet')
       expect(page).to have_link('Add Feature')
     end
@@ -31,7 +31,7 @@ feature 'adding features to project' do
   context '1 project has been added with features' do
 
     before :each do
-      visit(project_path(project))
+      visit project_path(project)
       click_on('Add Feature')
     end
 
@@ -43,13 +43,13 @@ feature 'adding features to project' do
       expect(page).to have_content('Name 1')
       expect(page).to have_content('Description 1')
       expect(page).to have_content('31/08/16')
-      expect(current_path).to eq(project_path(project))
+      expect(current_path).to eq project_path(project)
     end
 
     scenario 'adds features link takes user to correct path' do
-      visit(project_path(project))
+      visit project_path(project)
       click_link('Add Feature')
-      expect(current_path).to eq(new_project_feature_path(project))
+      expect(current_path).to eq new_project_feature_path(project)
     end
 
     let!(:request) do
@@ -58,10 +58,10 @@ feature 'adding features to project' do
 
     scenario 'user clicks feature name and visits feature page' do
       visit project_path(project)
-      click_on 'Test Feature'
-      expect(page).to have_content 'Test Feature'
-      expect(current_path).to eq "/features/#{Feature.last.id}"
-      expect(page).to have_content 'Assigned Developer: Not Assigned'
+      click_on('Test Feature')
+      expect(page).to have_content('Test Feature')
+      expect(current_path).to eq feature_path(feature)
+      expect(page).to have_content('Assigned Developer: Not Assigned')
     end
 
 
@@ -75,8 +75,8 @@ feature 'adding features to project' do
 
     scenario 'user can see the assigned developer' do
       visit project_path(project)
-      click_on 'Test Feature'
-      expect(page).to have_content 'Assigned Developer: dev@test.com'
+      click_on('Test Feature')
+      expect(page).to have_content('Assigned Developer: dev@test.com')
     end
 
   end

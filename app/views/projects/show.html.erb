@@ -1,27 +1,10 @@
 
-<%= @project.name %>
-Project Description
-No features yet
+<h3>Project: <%= @project.name %></h3>
+<h3>Description: <%= @project.description%></h3>
 
+<% if current_user.id == @project.user_id %>
 <%= link_to 'Add Feature', new_project_feature_path(@project) %>
-
-<% @project.features.each do |feature| %>
-
-	<p><%= link_to feature.name, feature_path(feature) %></p>
-	<p><%= feature.description %></p>
-	<p><%= feature.deadline.strftime("%y/%m/%d") %></p>
-
-
-	<% if feature.requests.any? %>
-			<% if feature.requests.any? {|request| request.assigned} %>
-			 	This feature has already been assigned to a user.
-			<% else %>
-				<div><p>Not assigned</p>
-				<span class=request-status>Inside loop</span><%= link_to 'Send Request', feature_requests_path(feature), class: 'request-link'%></div>
-			<% end %>
-	<% else %>
-			<div><p>Not assigned</p>
-			<span class=request-status>Outside loop</span><%= link_to 'Send Request', feature_requests_path(feature), class: 'request-link'%></div>
-	<% end %>
-
 <% end %>
+
+<h4>Features: </h4>
+<%= render "feature_list" %>

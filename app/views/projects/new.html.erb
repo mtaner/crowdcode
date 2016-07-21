@@ -1,12 +1,25 @@
-<%= form_for @project do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :description %>
-  <%= f.text_area :description, size: "60x12" %>
-  <%= f.label :launch_date %>
-  <%= f.date_field :launch_date %>
-  <%= f.label :image %>
-  <%= f.file_field :image %>
-  <%= f.submit %>
+<div class="form-wrapper">
+  
+  <h2>Start a project</h2>
+  
+    <%= form_for @project do |f| %>
+      <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name %><br />
+      </div>
+      
+      <div class="field" id="description_field">
+        <%= f.label :description %>
+        <%= f.text_field :description %><br />
+      </div>
+      
+      <div class="field">
+        <%= f.label :launch_date %>
+        <%= f.date_field :launch_date %>
+      </div>
+      
+      <div class="actions">
+        <%= f.submit %></div>
+    <% end %>
 
-<% end %>
+</div>

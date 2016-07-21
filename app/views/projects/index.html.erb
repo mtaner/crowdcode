@@ -8,25 +8,16 @@
 	<div>
 		<div class='sub-title'>Recommended for you:</div>
 		<div class='projects-recommended'>
-			<% @projects = @projects.sort_by {|project| project.launch_date} %>
-			<% @projects.each do |project| %>
-				<div class='project-container'>
-					<div class='image-container'><img class='project-image' src='./images/idea.jpg' /></div>
-					<div class='text-container'>
-						<p class='bold-text'><%= link_to project.name, project_path(project) %></p>
-						<p><%= project.description %><p>
-						<p><span class='bold-text'>Launch date: </span><%= project.launch_date.strftime('%d/%m/%Y') %></p>
-						<p><span class='bold-text'>Posted by: </span> <%= User.find(project.user_id).email %></p>
-					</div>
+			<%= render "project_list" %>	
 		</div>
-			<% end %>
-		</div>
+	</div>
 
 	<div class='footer'>
 		<a href='/'><img class='full-logo-footer' src='/images/full_logo.png'/></a>
 	</div>
 
-	</div>
+</div>
+
 
 
 

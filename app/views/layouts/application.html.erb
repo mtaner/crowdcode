@@ -11,27 +11,7 @@
 
   <body>
 
-    <ul class='navbar'>
-
-        <li class='nav-content-left'><%= link_to 'Start a project', new_project_path(@project) %></li>
-        <li class='nav-content-left'><%= link_to "About us" %></li>
-          
-      <li class='navbar-center'><a href='/'><img class='full-logo' src='/images/full_logo.png'/></a></li>  
-
-      <% if current_user %>
-      
-          <li class='nav-content-right'><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
-          <li class='nav-content-right'><%= link_to "My profile", current_user %></li>
-        
-      <% else %>
-      
-          <li class='nav-content-right'><%= link_to "Sign in", new_user_session_path %></li>
-          <li class='nav-content-right'><%= link_to "Sign up", new_user_registration_path %></li>
-          <li class='nav-content-right'><%= link_to "Sign in with Github", user_github_omniauth_authorize_path %></li>
-
-      <% end %>
-
-    </ul>
+    <%= render "/layouts/navbar" %>
 
     <div class="notice"><%= notice %></div>
     <div class="alert"><%= alert %></div>
