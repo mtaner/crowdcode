@@ -11,21 +11,17 @@ No features yet
 	<p><%= feature.description %></p>
 	<p><%= feature.deadline.strftime("%y/%m/%d") %></p>
 
-		<% if feature.requests.any? %>
-				<% feature.requests.each do |request| %>
-					<% if request.assigned %>
-						<% return %>
-						<p>This feature has already been assigned to another user</p>
-					<% else %>
-					<div>
-						<% return %>
-						<p>Not assigned</p>
-						<span class=request-status>Inside loop</span><%= link_to 'Send Request', feature_requests_path(feature), class: 'request-link'%></div>
-					<% end %>
-				<% end %>
-		<% else %>
-				<div>
-				<p>Not assigned</p>
-				<span class=request-status>Outside loop</span><%= link_to 'Send Request', feature_requests_path(feature), class: 'request-link'%></div>
-		<% end %>
+
+	<% if feature.requests.any? %>
+			<% if feature.requests.any? {|request| request.assigned} %>
+			 	This feature has already been assigned to a user.
+			<% else %>
+				<div><p>Not assigned</p>
+				<span class=request-status>Inside loop</span><%= link_to 'Send Request', feature_requests_path(feature), class: 'request-link'%></div>
+			<% end %>
+	<% else %>
+			<div><p>Not assigned</p>
+			<span class=request-status>Outside loop</span><%= link_to 'Send Request', feature_requests_path(feature), class: 'request-link'%></div>
+	<% end %>
+
 <% end %>
