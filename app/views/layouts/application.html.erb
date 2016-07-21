@@ -13,24 +13,22 @@
 
     <ul class='navbar'>
 
-      <div class='navbar-left'>
-        <li><%= link_to "Start a project" %></li>
-        <li><%= link_to "About us" %></li>
-      </div>
-      
-      <li class='navbar-center'><a href='/'><img class='name-logo' src='/images/name_logo.png'/></a></li>  
+        <li class='nav-content-left'><%= link_to "Start a project" %></li>
+        <li class='nav-content-left'><%= link_to "About us" %></li>
+          
+      <li class='navbar-center'><a href='/'><img class='name-logo' src='/images/full_logo.png'/></a></li>  
 
       <% if current_user %>
-        <div class='navbar-right'>
+      
           <li class='nav-content-right'><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
           <li class='nav-content-right'><%= link_to "My profile", current_user %></li>
-        </div>
+        
       <% else %>
-        <div class='navbar-right'>
+      
           <li class='nav-content-right'><%= link_to "Sign in", new_user_session_path %></li>
           <li class='nav-content-right'><%= link_to "Sign up", new_user_registration_path %></li>
           <li class='nav-content-right'><%= link_to "Sign in with Github", user_github_omniauth_authorize_path %></li>
-        </div>
+
       <% end %>
 
     </ul>

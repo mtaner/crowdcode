@@ -8,7 +8,7 @@ html, body{
 a {
 	text-decoration: none;
 	color: black;
-	font-size: 20px;
+	font-size: 18px;
 }
 
 a:hover {
@@ -24,24 +24,28 @@ a:hover {
 	padding: 0px;
 	overflow: hidden;
 	background-color: white;
-	height: 80px;
+	height: 170px;
 	width: 100%;
 	border: 1px #d3d3d3 solid;
 }
 
 .navbar-center {
-	align-self: center;
+	padding-top: 10px;
+	padding-left: 180px;
+	padding-right: 180px;
 }
 
-.navbar-right {
-
+.nav-content-left {
+	padding-top: 60px;
+	padding-right: 40px;
 }
 
-.navbar-left {
-	
+.nav-content-right {
+	padding-top: 60px;
+	padding-left: 40px;
 }
 
 .name-logo {
-	height: 50px;
+	height: 150px;
 	width: auto;
 }
