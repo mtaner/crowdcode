@@ -1,9 +1,29 @@
-<%= form_for @user, html: {multipart: true} do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :description %>
-  <%= f.text_area :description %>
-  <%= f.label :image %>
-  <%= f.file_field :image %>
-  <%= f.submit %>
-<% end %>
+<div class="form-wrapper">
+  <h2>Edit profile</h2>
+
+    <%= form_for @user, html: {multipart: true} do |f| %>
+      
+      <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
+
+      <div class="field">
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+      </div>
+
+      <div class="field">
+        <%= f.label :image %>
+        <%= f.file_field :image %>
+      </div>
+      
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+
+    <% end %>
+
+</div>
+
+
