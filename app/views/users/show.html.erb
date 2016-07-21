@@ -1,16 +1,20 @@
 <div class='profile-container-side'>
-    <h1>
+
+    <h1> Hi, I'm <%= @user.name %>
+      <br>
+      <%= image_tag @user.image.url(:bigthumb) %>
+    </h1>
+    <h3> E-mail: </h3> <h4> <%= @user.email %> </h4>
+    <h2>
       <% if current_user.id == @user.id %>
       <%= link_to "Edit profile", edit_user_path %>
       <% end %>
-    </h1>
-    <h2> Hi, I'm <%= @user.name %>   </h2>
-    <%= image_tag @user.image.url(:bigthumb) %>
-    <h3> E-mail: </h3> <h4> <%= @user.email %> </h4>
-    <h3> About Me: </h3> <h4> <%= @user.description %> </h4>
-    <h3> Projects Started </h3>
-    <h4> <% @projects_started.each do |project| %>
-      <%= project.name %>
+    </h2>
+
+    <h5> About Me: </h5> <h6> <%= @user.description %> </h6>
+    <h5> Projects Started </h5>
+    <h6>  <% @projects_started.each do |project| %>
+      <li> <%= project.name %></li>
       <% end %>
-    </h4>
+    </h6>
 </div>
