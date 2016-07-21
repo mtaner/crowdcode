@@ -99,6 +99,55 @@ a:hover {
 
 }
 
+/********* Sign Up *************/
 
+.form-wrapper {
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
+}
 
+.form-wrapper
+input[type="email"],
+input[type="password"] {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0 auto;
+  outline: 0;
+  padding: 10px;
+  width: 93%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  margin-bottom: 30px;
+}
 
+.form-wrapper
+input[type="submit"] {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #0BBF92;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #0BBF92;
+  margin-bottom: 10px;
+}
+
+.form-wrapper label {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.form-wrapper h2 {
+  margin-top: 0;
+}
+
+.form-wrapper a {
+  margin-bottom: 90px;
+}
