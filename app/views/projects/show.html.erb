@@ -14,9 +14,11 @@ No features yet
 		<% if feature.requests.any? %>
 				<% feature.requests.each do |request| %>
 					<% if request.assigned %>
+						<% return %>
 						<p>This feature has already been assigned to another user</p>
 					<% else %>
 					<div>
+						<% return %>
 						<p>Not assigned</p>
 						<span class=request-status>Inside loop</span><%= link_to 'Send Request', feature_requests_path(feature), class: 'request-link'%></div>
 					<% end %>
