@@ -1,3 +1,18 @@
 Hello, this is the projects/index view.
 
 <%= link_to 'New Project', new_project_path(@project) %>
+
+<% @projects = @projects.sort_by {|project| project.launch_date} %>
+<% @projects.each do |project| %>
+
+<div class="projects">
+	<ul>
+		<li>Project name:<%= project.name %></li>
+		<li>Project description:<%= project.description %></li>
+		<li>Launch date:<%= project.launch_date.strftime('%d/%m/%Y') %></li>
+		<li>Posted by:<%= User.find(project.user_id).email %></li>
+		<li><%= link_to 'Go to project', project_path(project) %></li>
+	</ul>
+</div>
+
+<% end %>
