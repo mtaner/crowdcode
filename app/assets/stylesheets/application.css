@@ -8,7 +8,7 @@ html, body{
 a {
 	text-decoration: none;
 	color: black;
-	font-size: 18px;
+	font-size: 16px;
 }
 
 a:hover {
@@ -24,7 +24,7 @@ a:hover {
 	padding: 0px;
 	overflow: hidden;
 	background-color: white;
-	height: 170px;
+	height: 120px;
 	width: 100%;
 	border: 1px #d3d3d3 solid;
 }
@@ -36,16 +36,16 @@ a:hover {
 }
 
 .nav-content-left {
-	padding-top: 60px;
+	padding-top: 40px;
 	padding-right: 40px;
 }
 
 .nav-content-right {
-	padding-top: 60px;
+	padding-top: 40px;
 	padding-left: 40px;
 }
 
-.name-logo {
-	height: 150px;
+.full-logo {
+	height: 100px;
 	width: auto;
 }
