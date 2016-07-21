@@ -109,6 +109,7 @@ a:hover {
   border-radius: 8px;
 }
 
+.form-wrapper
 input[type="email"],
 input[type="password"] {
   background: rgba(255,255,255,0.1);
@@ -124,6 +125,7 @@ input[type="password"] {
   margin-bottom: 30px;
 }
 
+.form-wrapper
 input[type="submit"] {
   padding: 19px 39px 18px 39px;
   color: #FFF;
@@ -137,7 +139,7 @@ input[type="submit"] {
   margin-bottom: 10px;
 }
 
-.field label {
+.form-wrapper label {
   display: block;
   margin-bottom: 3px;
 }
