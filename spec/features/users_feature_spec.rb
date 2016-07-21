@@ -48,6 +48,14 @@ end
         click_link 'My profile'
         expect(page).to have_content 'test@example.com'
       end
+
+      it 'should show the projects the user started' do
+        signup
+        createproject
+        click_link 'My profile'
+        expect(page).to have_content 'test@example.com'
+        expect(page).to have_content 'Songodoro'
+      end
     end
 
 
@@ -71,5 +79,6 @@ end
         visit user_path(user)
         expect(page).to_not have_content 'Edit profile'
       end
+
   end
 end

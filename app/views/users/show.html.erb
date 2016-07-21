@@ -3,6 +3,7 @@
 <% end %>
 
 
+
 <br>
 <br>
 <%= image_tag @user.image.url(:thumb) %>
@@ -12,3 +13,10 @@
 <strong> E-mail: </strong> <%= @user.email %>
 <br>
 <strong> About Me: </strong> <%= @user.description %>
+<br>
+<strong> Projects Started </strong>
+
+<% @projects_started.each do |project| %>
+  <p><%= project.name %></p>
+<% end %>
+<br>

@@ -14,3 +14,13 @@ def login(email: 'test@example.com', password: 'testtest')
   fill_in('Password', with: password)
   click_on('Sign in')
 end
+
+
+def createproject(name: 'Songodoro', description: 'Music break', launch_date: '01/12/2016')
+visit '/projects/new'
+fill_in 'Name', with: name
+fill_in 'Description', with: description
+fill_in 'Launch date', with: launch_date
+click_button 'Create Project'
+expect(page).to have_content 'Songodoro'
+end
