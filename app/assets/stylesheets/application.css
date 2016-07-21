@@ -15,6 +15,10 @@ a:hover {
 	color: #00BD8E;
 }
 
+.notice {
+
+}
+
 .navbar {
 	display: flex;
 	flex-direction: row;
@@ -49,3 +53,52 @@ a:hover {
 	height: 100px;
 	width: auto;
 }
+
+.homepage-container {
+	display: flex;
+	flex-direction: column;
+	padding-top: 0px;
+}
+
+.homepage-pic {
+	height: auto;
+	width: 100%;
+}
+
+.projects-love {
+	height: 500px;
+	width: 100%;
+	border: 1px #d3d3d3 solid;
+}
+
+.projects-recommended {
+	height: 500px;
+	width: 100%;
+	border: 1px #d3d3d3 solid;
+	display: flex;
+	flex-direction: row;
+}
+
+.project-container {
+	border: 1px #d3d3d3 solid;
+	width: 40px;
+}
+
+.image-container {
+	position: relative;
+}
+
+.picture-text {
+	position: absolute;
+	top: 300px;
+	font-size: 32px;
+	 color: white;
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   margin: 5px;
+
+}
+
+
+
+

@@ -1,18 +1,35 @@
-Hello, this is the projects/index view.
+<div class='homepage-container'>
 
-<%= link_to 'New Project', new_project_path(@project) %>
+	<div class='image-container'>
+		<img class='homepage-pic'src='./images/desk.jpg' />
+		<span class='picture-text'>Our mission is to help bring tech projects to life</span>
+	</div>
 
-<% @projects = @projects.sort_by {|project| project.launch_date} %>
-<% @projects.each do |project| %>
+	<div class='projects-love'>
+		Projects We Love:
 
-<div class="projects">
-	<ul>
-		<li>Project name:<%= project.name %></li>
-		<li>Project description:<%= project.description %></li>
-		<li>Launch date:<%= project.launch_date.strftime('%d/%m/%Y') %></li>
-		<li>Posted by:<%= User.find(project.user_id).email %></li>
-		<li><%= link_to 'Go to project', project_path(project) %></li>
-	</ul>
+	</div>
+
+	<div class='projects-recommended'>
+		Recommended For You:
+		
+		<% @projects = @projects.sort_by {|project| project.launch_date} %>
+		<div class='project-container'>
+		<% @projects.each do |project| %>
+			<ul>
+				<li>Project name:<%= project.name %></li>
+				<li>Project description:<%= project.description %></li>
+				<li>Launch date:<%= project.launch_date.strftime('%d/%m/%Y') %></li>
+				<li>Posted by:<%= User.find(project.user_id).email %></li>
+				<li><%= link_to 'Go to project', project_path(project) %></li>
+			</ul>
+		<% end %>
+		</div>
+	</div>
 </div>
 
-<% end %>
+
+
+
+
+
