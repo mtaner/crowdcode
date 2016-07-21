@@ -16,6 +16,9 @@ a:hover {
 }
 
 .navbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 	list-style-type: none;
 	margin: 0px;
 	padding: 0px;
@@ -26,19 +29,16 @@ a:hover {
 	border: 1px #d3d3d3 solid;
 }
 
-.navbar-left {
-	text-align: center;
-	display: inline;
-	height: 30px;
-	padding-top: 25px;
+.navbar-center {
+	align-self: center;
 }
 
 .navbar-right {
-	float: right;
-	display: inline;
-	height: 30px;
-	padding-top: 25px;
-	padding-right: 40px;
+
+}
+
+.navbar-left {
+	
 }
 
 .name-logo {
