@@ -58,10 +58,10 @@ ActiveRecord::Schema.define(version: 20160720155903) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "provider"
-    t.string   "uid"
     t.string   "name"
     t.text     "description"
+    t.string   "provider"
+    t.string   "uid"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
