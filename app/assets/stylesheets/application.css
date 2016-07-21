@@ -111,7 +111,10 @@ a:hover {
 
 .form-wrapper
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="text"],
+input[type="text_area"],
+input[type="date"] {
   background: rgba(255,255,255,0.1);
   border: none;
   font-size: 16px;
