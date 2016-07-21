@@ -11,7 +11,7 @@ feature 'viewing features' do
   end
 
 	let!(:project) do
-		Project.create(name: 'Test Project', user: entrepreneur)
+		Project.create(name: 'Test Project', user: entrepreneur, launch_date: '06/09/16')
 	end
 
 	let!(:feature) do
