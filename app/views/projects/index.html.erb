@@ -7,25 +7,13 @@
 
 	<div class='projects-love'>
 		Projects We Love:
-
 	</div>
 
 	<div class='projects-recommended'>
 		Recommended For You:
-		
-		<% @projects = @projects.sort_by {|project| project.launch_date} %>
-		<div class='project-container'>
-		<% @projects.each do |project| %>
-			<ul>
-				<li>Project name:<%= project.name %></li>
-				<li>Project description:<%= project.description %></li>
-				<li>Launch date:<%= project.launch_date.strftime('%d/%m/%Y') %></li>
-				<li>Posted by:<%= User.find(project.user_id).email %></li>
-				<li><%= link_to 'Go to project', project_path(project) %></li>
-			</ul>
-		<% end %>
-		</div>
+		<%= render "project_list" %>
 	</div>
+	
 </div>
 
 
