@@ -64,11 +64,7 @@ end
 
       it 'should be able to edit own profile' do
         signup
-        click_link 'My profile'
-        click_link 'Edit profile'
-        fill_in 'Name', with: 'Bob'
-        fill_in 'Description', with: 'Ruby developer'
-        click_button 'Update User'
+        editprofile
         expect(page).to have_content 'Bob'
         expect(page).to have_content 'Ruby developer'
       end
@@ -80,5 +76,10 @@ end
         expect(page).to_not have_content 'Edit profile'
       end
 
+      it 'should be able to upload an image' do
+        signup
+        editprofile
+        expect(page).to have_css "img[src*='bob.jpg']"
+      end
   end
 end
