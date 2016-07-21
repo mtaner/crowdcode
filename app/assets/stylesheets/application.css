@@ -8,7 +8,7 @@ html, body{
 a {
 	text-decoration: none;
 	color: black;
-	font-size: 16px;
+	font-size: 18px;
 }
 
 a:hover {
@@ -65,23 +65,22 @@ a:hover {
 	width: 100%;
 }
 
-.projects-love {
-	height: 500px;
-	width: 100%;
-	border: 1px #d3d3d3 solid;
-}
-
 .projects-recommended {
-	height: 500px;
+	height: 600px;
 	width: 100%;
-	border: 1px #d3d3d3 solid;
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 }
 
 .project-container {
 	border: 1px #d3d3d3 solid;
-	width: 40px;
+	border-radius: 12px;
+	height: 80%;
+	margin: 20px;
+	width: 25%;
+	background-color: white;
+	font-size: 14px;
 }
 
 .image-container {
@@ -91,12 +90,53 @@ a:hover {
 .picture-text {
 	position: absolute;
 	top: 300px;
-	font-size: 32px;
-	 color: white;
-   background: rgb(0, 0, 0); /* fallback color */
-   background: rgba(0, 0, 0, 0.7);
-   margin: 5px;
+	font-size: 46px;
+	color: black;
+	text-align: center;
+	font-weight: bold;
+	background: white;
+  background: rgba(500, 500, 500, 0.7);
+  width: 100%;
+}
 
+.image-container {
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+.project-image {
+	width: 100%;
+}
+
+.sub-title {
+	font-size: 22px;
+	padding-left: 60px;
+	padding-top: 50px;
+	padding-bottom: 30px;
+}
+
+.text-container {
+	margin: 15px;
+}
+
+.bold-text {
+	font-weight: bold;
+}
+
+.footer {
+	height: 140px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background-color: white;
+	border: 1px #d3d3d3 solid;
+}
+
+.full-logo-footer {
+	height: 100px;
+	width: auto;
+	padding-top: 20px;
 }
 
 

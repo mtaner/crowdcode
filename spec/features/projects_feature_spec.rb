@@ -14,7 +14,7 @@ feature 'Projects' do
   context 'adding a project' do
     scenario 'should display a link to add a project' do
       visit '/projects'
-      expect(page).to have_link 'New Project'
+      expect(page).to have_link 'Start a project'
       click_link 'New Project'
       expect(current_path).to eq '/projects/new'
     end
