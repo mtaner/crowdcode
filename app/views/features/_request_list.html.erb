@@ -2,12 +2,18 @@
 
   <h3>Requests Received for Feature:</h3>
 
+<div class="feature-requests">
+
   <% if @feature.requests.any? %>
     <% @feature.requests.each do |request| %>
-      <%= request.user.email %>
-      <%= link_to 'Select', request_path(request), method: :patch %>
+    <ul class="feature-request-ul">
+      <li> <h4><%= request.user.email %></h4>  ||
+      <%= link_to 'Select', request_path(request), method: :patch %></li>
+    </ul>
     <% end %>
   <% else %>
     No requests received yet
   <% end %>
 <% end %>
+
+</div>

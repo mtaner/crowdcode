@@ -1,6 +1,9 @@
 # CrowdCode
 
+[![Coverage Status](https://coveralls.io/repos/github/mtaner/crowdcode/badge.svg?branch=master)](https://coveralls.io/github/mtaner/crowdcode?branch=master)
+
 A web app to help you crowdsource your MVP.
+
 
 ## Team
 
@@ -69,7 +72,7 @@ I can rate a developer and leave a review upon completion of a feature
 
 ```
 As a developer
-So that I can link my profile to my Github account 
+So that I can link my profile to my Github account
 I can sign up/sign in with Github
 ```
 

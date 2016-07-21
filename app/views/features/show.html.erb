@@ -1,9 +1,9 @@
-<h1><%= @feature.project.name %><h1>
-<h2><%= @feature.name %></h2>
-<h3>Description:<h3>
-<p><%= @feature.description %></p>
+<div class="feature-container">
+	<h3>Project:</h3> <h4><%= @feature.project.name %></h4>
+	<h3>Feature:</h3> <h4><%= @feature.name %></h4>
+	<h3>Description:<h3> <h4><%= @feature.description %></h4>
 
-<h3>Assigned Developer: <%= @dev %></h3>
+	<h3>Assigned Developer:</h3> <h4><%= @dev %></h4>
 
-<%= render "request_list" %>
-
+	<%= render "request_list" %>
+</div>
