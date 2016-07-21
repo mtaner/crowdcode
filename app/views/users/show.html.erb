@@ -1,22 +1,16 @@
-<% if current_user.id == @user.id %>
-<%= link_to "Edit profile", edit_user_path %>
-<% end %>
-
-
-
-<br>
-<br>
-<%= image_tag @user.image.url(:thumb) %>
-<br>
-<strong> Name: </strong> <%= @user.name %>
-<br>
-<strong> E-mail: </strong> <%= @user.email %>
-<br>
-<strong> About Me: </strong> <%= @user.description %>
-<br>
-<strong> Projects Started </strong>
-
-<% @projects_started.each do |project| %>
-  <p><%= project.name %></p>
-<% end %>
-<br>
+<div class='profile-container-side'>
+    <h1>
+      <% if current_user.id == @user.id %>
+      <%= link_to "Edit profile", edit_user_path %>
+      <% end %>
+    </h1>
+    <h2> Hi, I'm <%= @user.name %>   </h2>
+    <%= image_tag @user.image.url(:bigthumb) %>
+    <h3> E-mail: </h3> <h4> <%= @user.email %> </h4>
+    <h3> About Me: </h3> <h4> <%= @user.description %> </h4>
+    <h3> Projects Started </h3>
+    <h4> <% @projects_started.each do |project| %>
+      <%= project.name %>
+      <% end %>
+    </h4>
+</div>

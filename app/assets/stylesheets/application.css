@@ -181,3 +181,40 @@ input[type="submit"] {
   margin: 0;
   display: inline;
 }
+
+.profile-container-side {
+	padding-left: 20px;
+}
+
+.profile-container-side h1 {
+	position: fixed;
+  padding: 0;
+}
+
+.profile-container-side h2 {
+	color: #00BD8E;
+  padding: 0;
+}
+
+.profile-container-side h3 {
+	color: #00BD8E;
+  padding: 0;
+  margin-bottom: 2px;
+}
+
+.profile-container-side h4 {
+  padding: 0;
+  margin: 0;
+}
+
+.profile-container-side ul {
+  list-style: none;
+  padding-left: 2px;
+}
+
+.profile-container-side ul h4 {
+  color: #00BD8E;
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
