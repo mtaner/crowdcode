@@ -5,16 +5,5 @@
 
 <h3>Assigned Developer: <%= @dev %></h3>
 
-<% if @dev == 'Not Assigned' %>
+<%= render "request_list" %>
 
-	<h3>Requests Received for Feature:</h3>
-
-	<% if @feature.requests.any? %>
-		<% @feature.requests.each do |request| %>
-			<%= request.user.email %>
-			<%= link_to 'Select', request_path(request), method: :patch %>
-		<% end %>
-	<% else %>
-		No requests received yet
-	<% end %>
-<% end %>
