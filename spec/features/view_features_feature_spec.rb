@@ -38,8 +38,8 @@ feature 'viewing features' do
 		scenario 'entrepreneur can select a developer' do
 			click_on('Select')
 			expect(current_path).to eq feature_path(feature)
-			# expect(page).to have_content('Assigned Developer: dev@test.com')
-			# expect(page).not_to have_link('Select')
+			expect(page).to have_content('Assigned Developer: dev@test.com')
+			expect(page).not_to have_link('Select')
 		end
 	end
 
