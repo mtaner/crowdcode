@@ -2,9 +2,7 @@
 <h3>Project: <%= @project.name %></h3>
 <h3>Description: <%= @project.description%></h3>
 
-<% if current_user.id == @project.user_id %>
 <%= link_to 'Add Feature', new_project_feature_path(@project) %>
-<% end %>
 
 <h4>Features: </h4>
 <%= render "feature_list" %>
