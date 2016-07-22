@@ -8,6 +8,10 @@
         null,
         1,
         1,
+        null,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/mervetaner/Desktop/makers_academy/ma_course/crowdcode/app/models/with_user_association_extension.rb": [
@@ -120,9 +124,9 @@
         1,
         null,
         1,
-        5,
-        5,
-        5,
+        4,
+        4,
+        4,
         null,
         null
       ],
@@ -145,7 +149,7 @@
         1,
         1,
         1,
-        1,
+        null,
         1,
         null,
         null,
@@ -265,6 +269,6 @@
         0
       ]
     },
-    "timestamp": 1469173764
+    "timestamp": 1469174846
   }
 }
