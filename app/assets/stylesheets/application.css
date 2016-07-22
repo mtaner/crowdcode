@@ -111,7 +111,10 @@ a:hover {
 
 .form-wrapper
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="text"],
+input[type="text_area"],
+input[type="date"] {
   background: rgba(255,255,255,0.1);
   border: none;
   font-size: 16px;
@@ -150,4 +153,31 @@ input[type="submit"] {
 
 .form-wrapper a {
   margin-bottom: 90px;
+}
+
+.feature-container {
+	padding-left: 20px;
+}
+
+.feature-container h3 {
+	color: #00BD8E;
+  padding: 0;
+  margin-bottom: 5px;
+}
+
+.feature-container h4 {
+  padding: 0;
+  margin: 0;
+}
+
+.feature-container ul {
+  list-style: none;
+  padding-left: 5px;
+}
+
+.feature-container ul h4 {
+  color: #00BD8E;
+  padding: 0;
+  margin: 0;
+  display: inline;
 }

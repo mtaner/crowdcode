@@ -1,8 +1,28 @@
-<%= form_for [@project, @feature] do |f| %>
+<div class="form-wrapper">
+  
+  <h2>Add a feature</h2>
 
-Feature Name:<%= f.text_field :name %>
-Description:<%= f.text_field :description %>
-Deadline:<%= f.date_field :deadline, placeholder: 'dd/mm/yy' %>
-<%= f.submit %>
+  <%= form_for [@project, @feature] do |f| %>
+    
+    <div class="field">
+      <%= f.label 'Feature Name:' %>
+      <%= f.text_field :name %>
+    </div>
 
-<% end %>
+    <div class="field">
+      <%= f.label 'Description:' %>
+      <%= f.text_field :description %>
+    </div>
+
+    <div class="field">
+      <%= f.label 'Deadline:' %>
+      <%= f.date_field :deadline, placeholder: 'dd/mm/yy' %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  
+  <% end %>
+
+</div>

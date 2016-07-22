@@ -6,14 +6,14 @@
             This feature has already been assigned to a user.
         <% else %>
             <div><p>Not assigned</p>
-            <span class=request-status>Inside loop</span><%= link_to 'Send Request', feature_requests_path(feature), class: 'request-link'%></div>
+            <span class=request-status></span><%= link_to 'Send Request', feature_requests_path(feature), class: 'request-link'%></div>
         <% end %>
 
     <% else %>
 
         <div><p>Not assigned</p>
-        <span class=request-status>Outside loop</span><%= link_to 'Send Request', feature_requests_path(feature), class: 'request-link'%></div>
-    
+        <span class=request-status></span><%= link_to 'Send Request', feature_requests_path(feature), class: 'request-link'%></div>
+
     <% end %>
-  
+
   </div>
