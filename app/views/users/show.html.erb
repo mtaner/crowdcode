@@ -4,20 +4,30 @@
       <br>
       <%= image_tag @user.image.url(:bigthumb) %>
     </h1>
-    <h2> E-mail: </h2> <h3> <%= @user.email %> </h3>
-    <h4>
-      <% if current_user.id == @user.id %>
-      <%= link_to "Edit profile", edit_user_path %>
-      <% end %>
+    <h2> E-mail: </h2>
+    <h3> <%= @user.email %> </h3>
+
+    <% if current_user.id == @user.id %>
+
+      <h4 id="edit_profile">
+        <%= link_to "Edit profile", edit_user_path %>
+      </h4>
     </h4>
+    <% end %>
+
+
+
+
+
 
 </div>
 
 <div class='profile-container-body'>
-    <h3> About Me: </h3> <h4> <%= @user.description %> </h4>
+    <h3> About Me: </h3>
+    <h4> <%= @user.description %> </h4>
     <h3> Projects Started: </h3>
-    <h4>  <% @projects_started.each do |project| %>
-      <br><%= project.name %><br>
-      <% end %>
-    </h4>
+      <h4> <% @projects_started.each do |project| %>
+        <br><%= project.name %><br>
+        <% end %>
+      </h4>
 </div>

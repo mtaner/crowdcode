@@ -213,20 +213,20 @@ input[type="submit"] {
   position: fixed
   padding: 0;
   margin-top: 10px;
-  font-size: 10rpx;
+  font-size: 10px;
 }
 
-/*.profile-container-side ul {
-  list-style: none;
-  padding-left: 2px;
+#edit_profile a {
+  font-size: 12px;
+  font-weight: lighter;
 }
 
-.profile-container-side ul h4 {
-  color: #00BD8E;
+.profile-container-side h5 {
+  position: fixed
   padding: 0;
-  margin: 0;
-  display: inline;
-}*/
+  margin-top: 10px;
+  font-size: 10px;
+}
 
 
 .profile-container-body {
