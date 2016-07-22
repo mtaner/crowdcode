@@ -1,24 +1,13 @@
 <div class='profile-container-side'>
-    <h1> Hi, I'm <%= @user.name %>
-      <br>
-      <%= image_tag @user.image.url(:bigthumb) %>
-    </h1>
-    <h2> E-mail: </h2>
-    <h3> <%= @user.email %> </h3>
-    <h4 id="edit_profile">
-      <% if current_user.id == @user.id %>
-        <%= link_to "Edit profile", edit_user_path %>
-      <% end %>
-    </h4>
+  <div class='name'> Hi, I'm <%= @user.name %></div>
+  <div class='profile_picture'><%= image_tag @user.image.url(:bigthumb) %></div>
+  <h2> E-mail: </h2> <div class='email'> <%= @user.email %> </div>
+  <h4 id='edit_profile'> <%= render "edit_profile" %> </h4>
 </div>
 
 <div class='profile-container-body'>
-    <h3> About Me: </h3>
-    <p> <h4> <%= @user.description %> </h4> </p>
-    <p> <h3> Projects Started: </h3> </p>
-    <p> <h4 id="project_link">
-      <% @projects_started.each do |project| %>
-        <%= link_to "#{project.name}", project_path(project) %><br><br>
-      <% end %>
-    </h4></p>
+  <h3> About Me: </h3>
+  <div class='user_description'><%= @user.description %> </div>
+  <h3> Projects Started: </h3>
+  <div class='project_links'> <%= render "project_started" %> </div>
 </div>

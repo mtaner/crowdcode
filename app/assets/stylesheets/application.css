@@ -190,6 +190,25 @@ input[type="submit"] {
 	padding-left: 20px;
 }
 
+.name {
+  color: #00BD8E;
+  padding: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.profile_picture {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 0px
+}
+
+.email {
+  font-size: 16px;
+  font-weight: bold;
+}
 .profile-container-side h1 {
   color: #00BD8E;
   padding: 0px;
@@ -205,22 +224,21 @@ input[type="submit"] {
   font-size: 20px;
 }
 
-.profile-container-side h3 {
+/*.profile-container-side h3 {
   padding: 0px;
   margin-bottom: 0px;
   margin-top: 0px;
   font-size: 16px;
-}
+}*/
 
 .profile-container-side h4 {
-  position: fixed;
   padding: 0px;
   margin-top: 10px;
   font-size: 10px;
 }
 
 #edit_profile a {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: lighter;
 }
 
@@ -245,7 +263,13 @@ input[type="submit"] {
   margin-top: 0px;
 }
 
-#project_link a {
-  font-size: 16px;
+.project_links {
+  font-size: 10px;
   padding: 0px;
+  font-weight: bold;
+}
+
+.user_description {
+  font-weight: bold;
+
 }
