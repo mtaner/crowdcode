@@ -1,10 +1,20 @@
+<div class='project-pic-container'>
+	<%= image_tag @project.image.url(:large), class: 'project-main-image' %>
+<div>
 
-<h3>Project: <%= @project.name %></h3>
-<h3>Description: <%= @project.description%></h3>
+<div class='project-title'><%= @project.name %></div>
+<div class='project-description'><%= @project.description%></div>
 
-<% if current_user.id == @project.user_id %>
-<%= link_to 'Add Feature', new_project_feature_path(@project) %>
-<% end %>
-
-<h4>Features: </h4>
 <%= render "feature_list" %>
+
+<div class='add-feature-link'>
+	<% if current_user.id == @project.user_id %>
+	<%= link_to 'Add Feature', new_project_feature_path(@project), class:'add-ft-link-text' %>
+	<% end %>
+</div>
+
+<div class='footer'>
+   <a href='/'><img class='full-logo-footer' src='/images/full_logo.png'/></a>
+ </div>
+
+
