@@ -22,7 +22,6 @@ def create_project(name: 'Songodoro', description: 'Music break', launch_date: '
   fill_in('Description', with: description)
   fill_in('Launch date', with: launch_date)
   click_button('Create Project')
-  expect(page).to have_content('Songodoro')
 end
 
 def edit_profile(name: 'Bob', description: 'Ruby developer')

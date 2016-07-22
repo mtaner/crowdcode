@@ -177,10 +177,13 @@ input[type="submit"] {
 
 .feature-container ul h4 {
   color: #00BD8E;
-  padding: 0;
-  margin: 0;
+  padding: 0px;
+  margin: 0px;
   display: inline;
 }
+
+
+/********* Profile Page *************/
 
 .profile-container-side {
   position: absolute;
@@ -189,29 +192,29 @@ input[type="submit"] {
 
 .profile-container-side h1 {
   color: #00BD8E;
-  padding: 0;
+  padding: 0px;
   margin-bottom: 0px;
   margin-top: 0px;
 }
 
 .profile-container-side h2 {
 	color: #00BD8E;
-  padding: 0;
+  padding: 0px;
   margin-bottom: 5px;
   margin-top: 0px;
   font-size: 20px;
 }
 
 .profile-container-side h3 {
-  padding: 0;
+  padding: 0px;
   margin-bottom: 0px;
   margin-top: 0px;
   font-size: 16px;
 }
 
 .profile-container-side h4 {
-  position: fixed
-  padding: 0;
+  position: fixed;
+  padding: 0px;
   margin-top: 10px;
   font-size: 10px;
 }
@@ -222,12 +225,12 @@ input[type="submit"] {
 }
 
 .profile-container-body {
-  padding: 0;
+  padding: 0px;
   margin-left: 350px;
 }
 .profile-container-body h3 {
 	color: #00BD8E;
-  padding: 0;
+  padding: 0px;
   font-size: 18px;
   margin-bottom: 0px;
   margin-left: 0px;
@@ -235,7 +238,7 @@ input[type="submit"] {
 }
 
 .profile-container-body h4 {
-  padding: 0;
+  padding: 0px;
   font-size: 16px;
   margin-bottom: 0px;
   margin-left: 0px;
@@ -244,5 +247,5 @@ input[type="submit"] {
 
 #project_link a {
   font-size: 16px;
-  padding: 0px
+  padding: 0px;
 }

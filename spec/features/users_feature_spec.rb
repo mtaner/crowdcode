@@ -56,6 +56,16 @@ end
         expect(page).to have_content('test@example.com')
         expect(page).to have_content('Songodoro')
       end
+
+      it 'should take you to project when clicked' do
+        sign_up
+        create_project
+        click_link('My profile')
+        click_link('Songodoro')
+        expect(page).to have_content('Project: Songodoro')
+        expect(page).to have_content('Add Feature')
+      end
+
     end
 
 
