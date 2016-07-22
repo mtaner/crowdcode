@@ -11,6 +11,11 @@
 					<br>
 				<p><span class='bold-text'>Launch date: </span><%= prettify_date(project.launch_date) %></p>
 				<p><span class='bold-text'>Posted by: </span> <%= User.find(project.user_id).email %></p>
+				<div class="progress-container">
+					<div style="width: <%=project.progress%>" class="progressbar">
+					</div>
+				</div>
+
 			</div>
 		</div>
 	<% end %>

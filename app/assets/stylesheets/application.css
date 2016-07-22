@@ -277,3 +277,16 @@ input[type="submit"] {
   margin: 0;
   display: inline;
 }
+
+.progress-container {
+  position: relative;
+  height: 10px;
+  width: 200px;
+  border: 1px solid;
+}
+
+.progressbar {
+  position: absolute;
+  height: 100%;
+  background-color: green;
+}
