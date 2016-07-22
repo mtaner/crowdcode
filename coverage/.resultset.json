@@ -124,9 +124,9 @@
         1,
         null,
         1,
-        4,
-        4,
-        4,
+        5,
+        5,
+        5,
         null,
         null
       ],
@@ -149,7 +149,7 @@
         1,
         1,
         1,
-        null,
+        1,
         1,
         null,
         null,
@@ -227,6 +227,12 @@
       "/Users/mervetaner/Desktop/makers_academy/ma_course/crowdcode/app/helpers/projects_helper.rb": [
         0,
         0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0
       ],
       "/Users/mervetaner/Desktop/makers_academy/ma_course/crowdcode/app/helpers/requests_helper.rb": [
@@ -269,6 +275,6 @@
         0
       ]
     },
-    "timestamp": 1469174846
+    "timestamp": 1469176640
   }
 }

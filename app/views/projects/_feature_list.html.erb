@@ -1,16 +1,16 @@
 <table>
 	<tr>
     <th>Feature Name</th>
-    <th>Description</th> 
+    <th>Description</th>
     <th>Deadline</th>
     <th>Status</th>
   </tr>
 
 	<% @project.features.each do |feature| %>
-		<tr>	  
+		<tr>
 		  <td><%= link_to feature.name, feature_path(feature) %></td>
 		  <td><%= feature.description %></td>
-		  <td><%= feature.deadline.strftime("%y/%m/%d") %></td>
+		  <td><%= format_date(feature.deadline) %></td>
 
 		  <td><%= render "display_assigned_dev", :feature => feature %></td>
 		</tr>
@@ -18,6 +18,3 @@
 	<% end %>
 
 </table>
-
-  
-  
