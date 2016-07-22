@@ -221,14 +221,6 @@ input[type="submit"] {
   font-weight: lighter;
 }
 
-.profile-container-side h5 {
-  position: fixed
-  padding: 0;
-  margin-top: 10px;
-  font-size: 10px;
-}
-
-
 .profile-container-body {
   padding: 0;
   margin-left: 350px;
@@ -248,5 +240,9 @@ input[type="submit"] {
   margin-bottom: 0px;
   margin-left: 0px;
   margin-top: 0px;
+}
 
+#project_link a {
+  font-size: 16px;
+  padding: 0px
 }
