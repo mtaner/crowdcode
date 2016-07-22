@@ -5,16 +5,13 @@
 <div class='project-title'><%= @project.name %></div>
 <div class='project-description'><%= @project.description%></div>
 
+
 <%= render "feature_list" %>
 
 <div class='add-feature-link'>
-	<% if current_user.id == @project.user_id %>
 	<%= link_to 'Add Feature', new_project_feature_path(@project), class:'add-ft-link-text' %>
-	<% end %>
 </div>
 
 <div class='footer'>
    <a href='/'><img class='full-logo-footer' src='/images/full_logo.png'/></a>
  </div>
-
-

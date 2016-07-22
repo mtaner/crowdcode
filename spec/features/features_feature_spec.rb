@@ -11,7 +11,7 @@ feature 'adding features to project' do
   end
 
   let!(:project) do
-    Project.create(name: 'Test Project', user_id: user.id)
+    Project.create(name: 'Test Project', user_id: user.id, launch_date: '08/09/2016')
   end
 
   let!(:feature) do
@@ -22,8 +22,8 @@ feature 'adding features to project' do
   context '1 project has been added with no features added' do
 
     scenario 'project has no features' do
+      login(email: 'owner@test.com')
       visit project_path(project)
-      expect(page).to have_content('No features yet')
       expect(page).to have_link('Add Feature')
     end
   end
@@ -31,6 +31,7 @@ feature 'adding features to project' do
   context '1 project has been added with features' do
 
     before :each do
+      login(email: 'owner@test.com')
       visit project_path(project)
       click_on('Add Feature')
     end
