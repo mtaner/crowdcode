@@ -7,18 +7,11 @@
     <h2> E-mail: </h2>
     <h3> <%= @user.email %> </h3>
 
-    <% if current_user.id == @user.id %>
-
-      <h4 id="edit_profile">
+    <h4 id="edit_profile">
+      <% if current_user.id == @user.id %>
         <%= link_to "Edit profile", edit_user_path %>
-      </h4>
+      <% end %>
     </h4>
-    <% end %>
-
-
-
-
-
 
 </div>
 
