@@ -2,8 +2,7 @@
 
 [![Coverage Status](https://coveralls.io/repos/github/mtaner/crowdcode/badge.svg?branch=master)](https://coveralls.io/github/mtaner/crowdcode?branch=master)
 
-A web app to help you crowdsource your MVP.
-
+Week 9 project at Makers Academy - CrowdCode is web app designed to help bring tech ideas to life.
 
 ## Team
 
@@ -13,6 +12,30 @@ Luke Aveil
 Paul Kenrick
 Abdullah Mahmood
 Faisal Mahmood
+
+## Set Up
+
+```
+$ clone this repo locally
+$ cd crowdcode
+$ gem install bundler
+$ bundle
+$ bin/rake db:setup
+$ rspec
+```
+
+## How to run the program
+
+```
+$ bin/rails s
+$ open http://localhost:3000
+```
+
+## Screenshots
+
+![Main screen](http://i.imgur.com/2P5zvrS.png)
+![Main screen](http://i.imgur.com/BHiENso.png)
+![Main screen](http://i.imgur.com/KK1HgAO.png)
 
 ## User Stories
 
@@ -49,25 +72,13 @@ I can see the developer requests for each feature
 ```
 As a budding tech entrepreneur
 So that I can select a suitable developer
-I can view a developer's CrowdCode profile and rating/reviews
+I can view a developer's CrowdCode profile
 ```
 
 ```
 As a budding tech entrepreneur
 So that I can assign a developer to a feature
 I can approve a developer's request to develop a feature
-```
-
-```
-As a budding tech entrepreneur
-So that I can find a replacement developer at short notice
-I can view a list of developers that have shown interest for a feature that has already been assigned
-```
-
-```
-As a budding tech entrepreneur
-So that I can give feedback to developers
-I can rate a developer and leave a review upon completion of a feature
 ```
 
 ```
@@ -84,20 +95,8 @@ I can send a request to work on a feature
 
 ```
 As a developer
-So that I stay flexible
-I can withdraw a request to work on a feature before the project launch date
-```
-
-```
-As a developer
-So that I can still be considered for developing a feature
-I can only show interest in a feature that already has a confirmed developer
-```
-
-```
-As a developer
 So that I know to start working on a feature
-I will receive an email notification once a project is confirmed to go live
+I will receive an email notification once I have been approved to work on a feature
 ```
 
 ```
@@ -105,33 +104,3 @@ As a developer
 So that I can increase my chances of being chosen
 I can customise my profile
 ```
-
-
-
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-Set up:
-
-`brew install phantomjs`
