@@ -1,17 +1,15 @@
 # CrowdCode
 
-[![Coverage Status](https://coveralls.io/repos/github/mtaner/crowdcode/badge.svg?branch=master)](https://coveralls.io/github/mtaner/crowdcode?branch=master)
-
 Week 9 project at Makers Academy - CrowdCode is web app designed to help bring tech ideas to life.
 
 ## Team
 
-Merve Taner
-Riya Pabari
-Luke Aveil
-Paul Kenrick
-Abdullah Mahmood
-Faisal Mahmood
+- Merve Taner
+- Riya Pabari
+- Luke Aveil
+- Paul Kenrick
+- Abdullah Mahmood
+- Faisal Mahmood
 
 ## Set Up
 
