@@ -237,7 +237,7 @@ input[type="submit"] {
 
 .profile-container-body {
   padding: 0px;
-  margin-left: 350px;
+  margin-left: 375px;
 }
 .profile-container-body h3 {
 	color: #00BD8E;
@@ -263,7 +263,8 @@ input[type="submit"] {
 }
 
 .user_description {
-  font-weight: bold;
+  font-weight: normal;
+
 
 
 }
