@@ -250,7 +250,7 @@ Devise.setup do |config|
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
 
   config.omniauth :github, ENV["GITHUB_CLIENT_ID"], ENV["GITHUB_CLIENT_SECRET"],
-                  callback_url: "http://localhost:3000/users/auth/github/callback"
+                  callback_url: "https://crowdcodev1.herokuapp.com/users/auth/github/callback"
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
