@@ -2,7 +2,7 @@
   
   <h2>Start a project</h2>
   
-    <%= form_for @project do |f| %>
+    <%= form_for @project, html: {multipart: true} do |f| %>
       <div class="field">
         <%= f.label :name %>
         <%= f.text_field :name %><br />
@@ -16,6 +16,11 @@
       <div class="field">
         <%= f.label :launch_date %>
         <%= f.date_field :launch_date %>
+      </div>
+
+       <div class="field">
+        <%= f.label :image %>
+        <%= f.file_field :image %>
       </div>
       
       <div class="actions">

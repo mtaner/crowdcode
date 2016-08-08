@@ -1,9 +1,20 @@
-<% @project.features.each do |feature| %>
-  
-  <p><%= link_to feature.name, feature_path(feature) %></p>
-  <p><%= feature.description %></p>
-  <p><%= feature.deadline.strftime("%y/%m/%d") %></p>
+<table>
+	<tr>
+    <th>Feature Name</th>
+    <th>Description</th>
+    <th>Deadline</th>
+    <th>Status</th>
+  </tr>
 
-  <%= render "display_assigned_dev", :feature => feature %>
+	<% @project.features.each do |feature| %>
+		<tr>
+		  <td><%= link_to feature.name, feature_path(feature) %></td>
+		  <td><%= feature.description %></td>
+		  <td><%= format_date(feature.deadline) %></td>
 
-<% end %>
+		  <td><%= render "display_assigned_dev", :feature => feature %></td>
+		</tr>
+
+	<% end %>
+
+</table>

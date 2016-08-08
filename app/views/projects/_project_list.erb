@@ -1,15 +1,21 @@
 <% @projects = @projects.sort_by {|project| project.launch_date} %>
 
-<div class='project-container'>
+	<% @projects.each do |project| %>
 
-    <% @projects.each do |project| %>
-      <ul>
-        <li>Project name:<%= project.name %></li>
-        <li>Project description:<%= project.description %></li>
-        <li>Launch date:<%= project.launch_date.strftime('%d/%m/%Y') %></li>
-        <li>Posted by:<%= User.find(project.user_id).email %></li>
-        <li><%= link_to 'Go to project', project_path(project) %></li>
-      </ul>
-    <% end %>
-    
-</div>
+		<div class='project-container'>
+			<div class='image-container'><%= image_tag project.image.url(:medium), class: 'project-image' %></div>
+			<div class='text-container'>
+				<p class='bold-text'><%= link_to project.name, project_path(project) %></p>
+				<p><%= project.description %><p>
+					<br>
+					<br>
+				<p><span class='bold-text'>Launch date: </span><%= prettify_date(project.launch_date) %></p>
+				<p><span class='bold-text'>Posted by: </span> <%= User.find(project.user_id).email %></p>
+				<div class="progress-container">
+					<div style="width: <%=project.progress%>" class="progressbar">
+					</div>
+				</div>
+
+			</div>
+		</div>
+	<% end %>
