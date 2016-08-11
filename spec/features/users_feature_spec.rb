@@ -62,7 +62,7 @@ end
         create_project
         click_link('My profile')
         click_link('Songodoro')
-        expect(page).to have_content('Project: Songodoro')
+        expect(page).to have_content('Songodoro')
         expect(page).to have_content('Add Feature')
       end
 
