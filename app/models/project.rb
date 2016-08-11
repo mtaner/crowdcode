@@ -14,6 +14,9 @@ class Project < ApplicationRecord
 			assigned_features += feature.requests.select {|request| request.assigned}
 		end
 
-		p ((assigned_features.length / self.features.length.to_f)*100).to_i.to_s + '%'
+		if (self.features.length) != 0
+			p ((assigned_features.length / self.features.length.to_f)*100).to_i.to_s + '%'
+		else
+		end
 	end
 end
